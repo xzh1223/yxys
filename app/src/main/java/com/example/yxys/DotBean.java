@@ -1,6 +1,6 @@
 package com.example.yxys;
 
-public class PointBean {
+public class DotBean {
 
     private int x1; //起点x
     private int y1; //起点y
@@ -57,24 +57,15 @@ public class PointBean {
         isYRound = YRound;
     }
 
-    private PointBean() {
+    private DotBean() {
     }
 
-    private PointBean(int x1, int y1, int x2, int y2, boolean isXRound, boolean isYRound) {
+    public DotBean(int x1, int y1, int x2, int y2) {
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
-        this.isXRound = isXRound;
-        this.isYRound = isYRound;
-    }
 
-    public static PointBean add(int x1, int y1, int x2, int y2) {
-        return new PointBean(x1, y1, x2, y2, false, false);
-    }
-
-    public static PointBean add(int x1, int y1, int x2, int y2, boolean isXRound, boolean isYRound) {
-        return new PointBean(x1, y1, x2, y2, isXRound, isYRound);
     }
 
 }
